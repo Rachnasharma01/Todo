@@ -61,6 +61,23 @@ header{
     padding: 15px;
 }
 
+#tasksbox div{
+    display:flex;
+    width:100%;
+    padding: 10px;
+    column-gap: 10px;
+}
+#tasksbox div span{
+    width: 100%;
+    font-size:16px ;
+}
+#tasksbox div button{
+    padding:10px 20px;
+    border: none;
+    border-radius: 10px;
+     background-color:rgb(165, 143, 185);
+    
+}
 
 
 

@@ -3,10 +3,29 @@ const addbtn=document.querySelector("#addbtn");
 const tasksbox=document.querySelector("#tasksbox");
 
 addbtn.addEventListener("click",function(){
-    const p=document.createElement("p");
+   const div =document.createElement("div");
+    const p=document.createElement("span");
     p.innerText=task.value;
-    tasksbox.appendChild(p);
+    div.appendChild(p);
+    tasksbox.appendChild(div);
     task.value='';
+    const chk=document.createElement("input");
+    chk.setAttribute("type","checkbox");
+    div.appendChild(chk);
+    chk.addEventListener("click",function(){
+        if (chk.checked==true){
+            p.style.textDecoration="line-through";}
+         else{
+            p.style.textDecoration="none"
+ } })
+
+    const delbutton=document.createElement("button");
+    delbutton.innerText="Del";
+    
+     delbutton.addEventListener("click",function(){
+         div.remove();
+     }) 
+    div.appendChild(delbutton);
    
 })
 task.addEventListener("keypress",function(evt){
@@ -32,7 +51,7 @@ function addtoDom (){
  } })
 
     const delbutton=document.createElement("button");
-    delbutton.innerText="del";
+    delbutton.innerText="Del";
     
      delbutton.addEventListener("click",function(){
          div.remove();
